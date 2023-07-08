@@ -27,7 +27,7 @@ function listClass(){
     }
 
     //Finding an element in a list
-    this.findListElement = function(){
+    this.findListElement = function(element){
         for (let i = 0; i < this.dataStore.length; i++) {
            if (this.dataStore[i] == element) {
             return i
@@ -37,7 +37,21 @@ function listClass(){
     }
 
     //Remove an element from a list
-    this.removeListElement = function(){
+    this.removeListElement = function(element){
+        var foundAt = this.findListElement(element)
+        if(foundAt > -1){
+            this.dataStore.splice(foundAt,1)
+            -- this.listSize
+            return true
+        }
+        return false
+    }
 
+    //clear a list
+    this.clearList = function(){
+        delete this.dataStore;
+        this.dataStore = [];
+        this.listSize = position = 0;
+        
     }
 }
