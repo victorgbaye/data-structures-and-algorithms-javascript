@@ -28,14 +28,20 @@ var linkedList = function(){
     this.getSize = function(){
         return this.size
 
-        this.prepend = function(element){
-            const newNode = new NodeClass(element);
-            if (this.isEmpty) {
-                this.head = NodeClass
-            } else {
-                
-            }
+    }
+    this.prepend = function(element){
+        const newNode = new NodeClass(element);
+        if (this.isEmpty) {
+            this.head = NodeClass
+        } else {
+            
         }
+    }
+    this.find = function(element){
+        const headNode =new NodeClass("head");
+         while (element !== headNode) {
+            headNode = headNode.next 
+         }
     }
 
 }
