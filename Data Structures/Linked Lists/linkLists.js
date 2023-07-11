@@ -80,10 +80,10 @@ var linkedList = function(){
           let prev = this.head
           if(index > 0){
             for(let i = 0; i < index -1; i++){
-              prev = node.next
+              prev = prev.next
             }
             removedNode = prev.next;
-            prev.next = removeNode.next
+            prev.next = removedNode.next
             
           }
         }
