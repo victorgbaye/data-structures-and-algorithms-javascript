@@ -68,6 +68,29 @@ var linkedList = function(){
         }
       }
 
+      this.remove = function(index){
+        if(index < 0 || index > this.size){
+          return null
+        }
+        let removedNode
+        if(index === 0){
+          removedNode = this.head
+          this.head === this.head.next
+        }else{
+          let prev = this.head
+          if(index > 0){
+            for(let i = 0; i < index -1; i++){
+              prev = node.next
+            }
+            removedNode = prev.next;
+            prev.next = removeNode.next
+            
+          }
+        }
+        this.size--
+        return removedNode.element
+      }
+
     this.print = function(){
         if (this.isEmpty()) {
             console.log('This is an empty list');
