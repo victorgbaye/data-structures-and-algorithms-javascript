@@ -31,18 +31,33 @@ var linkedList = function(){
     }
     this.prepend = function(element){
         const newNode = new NodeClass(element);
-        if (this.isEmpty) {
-            this.head = NodeClass
+        if (this.isEmpty()) {
+            this.head = newNode
         } else {
-            
+            newNode.next = this.head
+            this.head = newNode.element
         }
     }
-    this.find = function(element){
-        const headNode =new NodeClass("head");
-         while (element !== headNode) {
-            headNode = headNode.next 
-         }
+    this.print = function(){
+        if (this.isEmpty()) {
+            console.log('This is an empty list');
+            
+        }else{
+            let curr = this.head
+            let listVale = ''
+            while(curr){
+                listVale += `${curr.element}`
+                curr = curr.next
+            }
+            console.log(listVale);
+        }
     }
+    // this.find = function(element){
+    //     const headNode =new NodeClass("head");
+    //      while (element !== headNode) {
+    //         headNode = headNode.next 
+    //      }
+    // }
 
 }
 
