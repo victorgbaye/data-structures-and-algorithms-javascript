@@ -49,6 +49,23 @@ var linkedList = function(){
           }
           prev.next = node
         }
+        this.size++
+      }
+      this.insert = function(element, index){
+        if(index < 0 || index > this.size){
+          return
+        }if(index === 0){
+          this.prepend(element)
+        }else{
+          let node = new Node(element)
+          let prev = this.head
+          for(let i = 0; i < index - 1; i++){
+            prev = prev.next
+          }
+          node.next = prev.next
+          prev.next = node
+          this.size++
+        }
       }
 
     this.print = function(){
