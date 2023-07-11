@@ -38,6 +38,19 @@ var linkedList = function(){
             this.head = newNode.element
         }
     }
+    this.append = function(){
+        let node = new NodeClass(element);
+        if(this.isEmpty()){
+          this.head = node
+        }else{
+          let prev = this.head;
+          while(prev.next){
+            prev = prev.next
+          }
+          prev.next = node
+        }
+      }
+
     this.print = function(){
         if (this.isEmpty()) {
             console.log('This is an empty list');
