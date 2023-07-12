@@ -38,7 +38,7 @@ var linkedList = function(){
             this.head = newNode.element
         }
     }
-    this.append = function(){
+    this.append = function(element){
         let node = new NodeClass(element);
         if(this.isEmpty()){
           this.head = node
@@ -68,7 +68,7 @@ var linkedList = function(){
         }
       }
 
-      this.remove = function(index){
+      this.removeFrom = function(index){
         if(index < 0 || index > this.size){
           return null
         }
@@ -89,6 +89,55 @@ var linkedList = function(){
         }
         this.size--
         return removedNode.element
+      }
+
+      this.removeValue = function(element){
+        if(this.isEmpty()){
+          return null
+        }if(this.head.element === element){
+          this.head = this.head.next
+          this.size--
+          return element
+        }else{
+          let prev = this.head
+          while((prev.next) && (prev.next.element !== element)){
+            prev = prev.next
+          }
+          if(prev.next){
+            const removedNode = prev.next
+            prev.next = removedNode.next
+            this.size--
+            return element
+          }
+          return null
+        }
+      }
+      this.search = function(element) {
+        if(this.isEmpty()){
+            return -1
+        }
+        let curr = this.head;
+        let i = 0
+        while(curr){
+            if(curr.element === element){
+                return i
+            }
+            curr = curr.next
+            i++
+        }
+        return -1
+      }
+      this.reverse = function(){
+        let prev = null
+        let curr = this.head
+        while(curr){
+          next = curr.next
+          curr.next = prev
+          prev = curr
+          curr = next
+        }
+        this.head = prev
+        return prev
       }
 
     this.print = function(){
@@ -114,6 +163,3 @@ var linkedList = function(){
 
 }
 
-
-const sampleNode = new linkedList;
-console.log(sampleNode.getSize)
