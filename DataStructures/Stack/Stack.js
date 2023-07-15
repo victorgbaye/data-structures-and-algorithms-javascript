@@ -11,3 +11,23 @@ Stack data structure operations
 *Clear: Clearing a stack
 
 */
+
+let StackClass = function(){
+    this.datastore = []
+    this.size = 0
+
+    this.push = function (value) {
+        this.datastore.push(value)
+        this.size++
+        
+    }
+    this.pop = function () {
+        this.datastore.pop()
+        this.size--
+    }
+    this.clear = function(){
+        this.datastore.length = 0
+        this.size = 0
+    }
+
+}
