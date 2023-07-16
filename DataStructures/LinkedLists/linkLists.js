@@ -19,7 +19,7 @@ var NodeClass = function(element){
 
 var linkedList = function(){
     this.head = null
-    this.size == 0
+    this.size = 0
 
     this.isEmpty = function(){
         return this.size == 0

@@ -16,6 +16,10 @@ let StackClass = function(){
     this.datastore = []
     this.size = 0
 
+    this.isEmpty = function(){
+        return this.size = 0
+    }
+
     this.push = function (value) {
         this.datastore.push(value)
         this.size++
@@ -25,8 +29,14 @@ let StackClass = function(){
         this.datastore.pop()
         this.size--
     }
+
+    this.peek = function (value){
+        return this.datastore[this.datastore.length-1]
+    }
+
     this.clear = function(){
-        this.datastore.length = 0
+        delete this.datastore
+        this.datastore = []
         this.size = 0
     }
 
