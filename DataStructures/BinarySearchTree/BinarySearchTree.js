@@ -35,4 +35,25 @@ let BinaryTree = function(){
             }
         }
     }
+    this.search = function(root, value){
+        if(!root){
+          return false
+        }else if(root.value == value){
+          return true
+        }
+          else{
+          if(value < root.value){
+           return this.search(root.left, value)
+          }else{
+            return this.search(root.right, value)
+          }
+        }
+      }
+      this.preorder = function(root){
+        if(root){
+          console.log(root.value)
+          this.preorder(root.left)
+          this.preorder(root.right)
+        }
+      }
 }
