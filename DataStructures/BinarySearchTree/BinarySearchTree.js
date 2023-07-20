@@ -1,4 +1,4 @@
-var Node = function(value){
+let Node = function(value){
     this.value = value
     this.left = nnull
     this.right = null
