@@ -1,3 +1,5 @@
+//Binary searvh tree implementation
+
 let Node = function(value){
     this.value = value
     this.left = nnull
