@@ -1,5 +1,5 @@
 //Binary searvh tree implementation
-
+//no cpde today too
 let Node = function(value){
     this.value = value
     this.left = nnull
