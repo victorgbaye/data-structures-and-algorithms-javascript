@@ -137,7 +137,7 @@ var linkedList = function(){
           curr = next
         }
         this.head = prev
-        return prev
+        // return prev
       }
 
     this.print = function(){

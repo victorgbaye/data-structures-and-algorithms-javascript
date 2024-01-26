@@ -2,7 +2,7 @@
 //no cpde today too
 let Node = function(value){
     this.value = value
-    this.left = nnull
+    this.left = null
     this.right = null
 }
 
